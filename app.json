@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "techbook",
-    "slug": "snack-c5638ef1-589d-42c2-b98b-fbc355c0d576",
+    "slug": "snack-f93dc693-346e-404c-a80b-685385efaa70",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,15 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier":"com.testuser.techbook",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "host.exp.exponent"
     },
     "android": {
-      "package":"com.testuser.techbook",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "host.exp.exponent"
     },
     "web": {
       "favicon": "./assets/favicon.png"

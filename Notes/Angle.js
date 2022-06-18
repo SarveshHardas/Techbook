@@ -14,7 +14,7 @@ import { RFValue } from 'react-native-responsive-fontsize';
 import { Header } from 'react-native-elements';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default class Sets extends Component {
+export default class Angle extends Component {
   render() {
     return (
       <View style={styles.container}>

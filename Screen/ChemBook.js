@@ -16,18 +16,52 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 export default class Chemistry extends Component {
   render() {
     return (
-      <View style={styles.container}>
+<View style={styles.container}>
         <SafeAreaView style={styles.androidSafeArea} />
 
-        <TouchableOpacity style={styles.backButton}
-         onPress={()=>{
-           this.props.navigation.navigate('Home')
-         }} >
-          <Image style={styles.backButtonImage}
-           source={require('../assets/backButton.png')} />
+        <TouchableOpacity
+          style={styles.backButton}
+          onPress={() => {
+            this.props.navigation.navigate('Home');
+          }}>
+          <Image
+            style={styles.backButtonImage}
+            source={require('../assets/backButton.png')}
+          />
         </TouchableOpacity>
 
-      <Text style={styles.textM} > Chemistry </Text>
+        <Text style={styles.textM}> Chemistry </Text>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            this.props.navigation.navigate('RDSharma');
+          }}>
+          <Text>RD Sharma</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            this.props.navigation.navigate('SChand');
+          }}>
+          <Text>S Chand</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            this.props.navigation.navigate('Arihant');
+          }}>
+          <Text>Arihant</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            this.props.navigation.navigate('Oxford');
+          }}>
+          <Text>Oxford</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -42,25 +76,37 @@ const styles = StyleSheet.create({
     marginTop:
       Platform.OS === 'android' ? StatusBar.currentHeight : RFValue(35),
   },
-  textM:{
+  textM: {
     fontFamily: 'Valerie-Hand',
-    fontSize:150,
-    alignSelf:"center",
-    marginTop:RFValue(250)
+    fontSize: 75,
+    alignSelf: 'center',
+    marginTop: RFValue(50),
+    marginBottom: RFValue(50),
+  },
+  button: {
+    marginTop: RFValue(30),
+    marginLeft: RFValue(10),
+    width: RFValue(150),
+    height: RFValue(50),
+    borderRadius: RFValue(20),
+    backgroundColor: 'white',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
   },
   backButton: {
     marginTop: RFValue(30),
-    marginLeft:RFValue(10),
-    width: RFValue(70),
+    marginLeft: RFValue(10),
+    width: RFValue(100),
     height: RFValue(60),
     borderRadius: RFValue(20),
   },
-  backButtonImage:{
-    alignItems:'center',
-    alignSelf:'center',
-    width:RFValue(80),
-    height:RFValue(80),
-    fontSize:30,
-    padding:20
-  }
+  backButtonImage: {
+    alignItems: 'center',
+    alignSelf: 'center',
+    width: RFValue(80),
+    height: RFValue(80),
+    fontSize: 30,
+    padding: 20,
+  },
 });

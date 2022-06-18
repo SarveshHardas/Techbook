@@ -2,56 +2,37 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
-  StyleSheet,
   TouchableOpacity,
-  SafeAreaView,
-  StatusBar,
-  Platform,
   Image,
+  StyleSheet,
+  SafeAreaView,
+  Platform,
+  StatusBar,
 } from 'react-native';
 import { RFValue } from 'react-native-responsive-fontsize';
-import { Header } from 'react-native-elements';
-import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default class BioNotes extends Component {
+export default class SChand extends Component {
   render() {
     return (
       <View style={styles.container}>
         <SafeAreaView style={styles.androidSafeArea} />
-
         <TouchableOpacity
           style={styles.backButton}
           onPress={() => {
-            this.props.navigation.navigate('Home');
+            this.props.navigation.navigate('Mathematics');
           }}>
           <Image
             style={styles.backButtonImage}
             source={require('../assets/backButton.png')}
           />
         </TouchableOpacity>
-
-        <Text style={styles.textM}> Biology Notes </Text>
-
-        <TouchableOpacity
-          style={styles.tOS}
-          onPress={() => {
-            this.props.navigation.navigate('Plant');
-          }}>
-          <Text style={styles.tOST}>Plant kingdom</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity
-          style={styles.tOS}
-          onPress={() => {
-            this.props.navigation.navigate('Animal');
-          }}>
-          <Text style={styles.tOST}>Animal Kingdom</Text>
-        </TouchableOpacity>
+        <Image source={require('../assets/error.png')} style={styles.error}/>
+        <Text style={styles.text}>Work In Process...</Text>
+        <Text style={styles.text}>Sorry For inconvenience</Text>
       </View>
     );
   }
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -60,12 +41,6 @@ const styles = StyleSheet.create({
   androidSafeArea: {
     marginTop:
       Platform.OS === 'android' ? StatusBar.currentHeight : RFValue(35),
-  },
-  textM: {
-    fontFamily: 'Valerie-Hand',
-    fontSize: 75,
-    alignSelf: 'center',
-    marginTop: RFValue(50),
   },
   backButton: {
     marginTop: RFValue(30),
@@ -82,21 +57,15 @@ const styles = StyleSheet.create({
     fontSize: 30,
     padding: 20,
   },
-  tOS: {
-    height: RFValue(100),
-    width: RFValue(150),
-    backgroundColor: 'white',
-    marginTop: RFValue(70),
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignSelf: 'center',
-    borderRadius: RFValue(20),
+  text:{
+    justifyContent:'center',
+    alignItems:'center',
+    alignSelf:'center',
   },
-  tOST: {
+   error: {
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
-    fontFamily: 'Valerie-Hand',
-    fontSize: RFValue(40),
+    marginBottom:RFValue(70),
   },
 });
